@@ -8,7 +8,7 @@ const Navbar = () => {
           <h1>Lelan BookStore</h1>
           <div className="dropdown">
             <button className='dropbtn'>Filter
-              {/* <FcFilledFilter className='filter'/> */}
+              <FcFilledFilter className='filter'/>
             </button>
             <div className="dropdown-content">
               <a href="#">Grade 1</a>
