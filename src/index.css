@@ -4,18 +4,19 @@
 @tailwind utilities;
 /* -------------------------- */
 
+*{
+    background-color: aliceblue;
+}
+
 /* ----------nav---------------------------------------- */
 .header-nav{
     /* @apply flex flex-row justify-between items-center; */
-    background-color: #f0f0fd;
     padding: 0 2rem;
     height: fit-content;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
-    display: flex;
+    display: grid;
 }
-.top-line{
-    border-left: 2px solid #000;
-}
+
 
 .header-nav-logo{
     padding: 0.2rem;
@@ -26,4 +27,29 @@
     text-decoration: none;
     display: flex;
     align-items: center;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+li{
+    cursor: pointer;
+}
+.search-bar{
+    position: relative;
+}
+.search{
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    padding: 0 1rem;
+    font-size: 1rem;
+    color: #000;
+    background-color: #fff;
 }
