@@ -1,0 +1,29 @@
+/* Tailwind css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* -------------------------- */
+
+/* ----------nav---------------------------------------- */
+.header-nav{
+    /* @apply flex flex-row justify-between items-center; */
+    background-color: #f0f0fd;
+    padding: 0 2rem;
+    height: fit-content;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+    display: flex;
+}
+.top-line{
+    border-left: 2px solid #000;
+}
+
+.header-nav-logo{
+    padding: 0.2rem;
+    margin-right: 0.2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
