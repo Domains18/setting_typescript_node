@@ -1,23 +1,19 @@
 import React from 'react'
-
+import { FcFilledFilter } from 'react-icons/fc'
 const Navbar = () => {
   return (
     <>
       <div className='header-nav'>
         <div className='header-nav-logo'>
           <h1>Lelan BookStore</h1>
-          <div className="filter">
-            <div className="dropdown">
-              <span>Filter</span>
-              <div className="dropdown-content">
-                <a href="#">All</a>
-                <a href="#">Action</a>
-                <a href="#">Adventure</a>
-                <a href="#">Comedy</a>
-                <a href="#">Drama</a>
-                <a href="#">Fantasy</a>
-                <a href="#">Horror</a>
-              </div>
+          <div className="dropdown">
+            <button className='dropbtn'>Filter
+              {/* <FcFilledFilter className='filter'/> */}
+            </button>
+            <div className="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
             </div>
           </div>
         </div>
