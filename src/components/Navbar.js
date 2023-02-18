@@ -22,7 +22,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className="search-bar">
-          <input type="text" placeholder="Search" />
+          <input className="search" type="text" placeholder="Search" />
         </div>
         <div className='header-nav-menu'>
           <ul>

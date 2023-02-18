@@ -91,3 +91,22 @@ li{
 .dropdown:hover .dropbtn{
     background-color: #3e8e41;
 }
+
+.search-bar{
+    position: relative;
+    top: 60px;
+}
+.search{
+    width: 400px;
+    height: 40px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.search:hover{
+    border-bottom: 2px solid #ec6d6d;
+}
+.search:focus{
+    outline: none;
+    border-bottom: 2px solid #ec6d6d;
+}
