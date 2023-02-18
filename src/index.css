@@ -82,7 +82,7 @@ li{
     display: block;
 }
 .dropdown-content a:hover{
-    background-color: #f1f1f1
+    background-color: #ec6d6d
 }
 
 .dropdown:hover .dropdown-content{

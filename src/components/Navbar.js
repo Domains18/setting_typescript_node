@@ -11,9 +11,13 @@ const Navbar = () => {
               {/* <FcFilledFilter className='filter'/> */}
             </button>
             <div className="dropdown-content">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
+              <a href="#">Grade 1</a>
+              <a href="#">Grade 2</a>
+              <a href="#">Grade 3</a>
+              <a href="#">Grade 4</a>
+              <a href="#">Grade 5</a>
+              <a href="#">Grade 6</a>
+              <a href="#">Grade 7</a>
             </div>
           </div>
         </div>
