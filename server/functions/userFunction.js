@@ -1,7 +1,7 @@
 const User = require('../models/user/userSchema');
 const expressAsyncHandler = require('express-async-handler');
 const jwt = require('jsonwebtoken');
-const bcrypt = require('bcryptjs');
+// const bcrypt = require('bcryptjs');
 
 
 // @desc    Register a new user
