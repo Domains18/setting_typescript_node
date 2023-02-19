@@ -9,14 +9,12 @@ const connectDatabase = require('./configurations/database.conf')
 
 
 const app = express();
-// connectDatabase()
+connectDatabase()
 
 // Middleware
 app.use(express.json());
 app.use(cors());
 app.use(express.urlencoded({ extended: false }));
-
-// console.log(process.env.MONGO_URI)
 
 // Routes
 app.use('/api/users', require('./routes/userRoutes'));

@@ -1,50 +1,40 @@
 const User = require('../models/user/userSchema');
 const expressAsyncHandler = require('express-async-handler');
-const jwt = require('jsonwebtoken');
-// const bcrypt = require('bcryptjs');
 
 
-// @desc    Register a new user
-// @route   POST /api/users/signup
-// @access  Public
+
+
 const registerUser = expressAsyncHandler(async (req, res) => {
     const { names, email, password } = req.body;
-
-    if(!names || !email || !password) {
-        res.status(400);
-        throw new Error('Please fill in all fields');
+    if (!names, !email, !password) {
+        res.status(400)
+        throw new Error('All fields are required');
     }
 
-    const validateUser = await User.findOne({ email });
+    //check if user exists
+    const checkUser = await User.findOne({ email });
 
-    if(validateUser) {
+    if (checkUser) {
         res.status(400);
-        throw new Error('User already exists');
-    }
+        throw new Error('user already exists');
 
+    }
+    
     //create user
-    const user = await User.create({
+    const newUser = await User.create({
         names,
         email,
         password
     });
 
-    if (user) {
+    if (newUser) {
         res.status(201);
         res.json({
-            _id: user.id,
-            names: user.names,
-            email: user.email,
-            //token
+            _id: newUser.id,
+            names: newUser.name,
+            email: newUser.email
         });
-    } else {
-        res.status(400);
-        throw new Error('Invalid User Data');
     }
 });
 
-
-
-module.exports = {
-    registerUser
-}
+module.exports={ registerUser}
