@@ -5,8 +5,11 @@ const colors = require('colors');
 const errorHandler = require('./middleware/errorHandler');
 const PORT = process.env.PORT || 5000;
 const cors = require('cors');
+const connectDatabase = require('./configurations/database.conf')
+
 
 const app = express();
+connectDatabase()
 
 // Middleware
 app.use(express.json());
