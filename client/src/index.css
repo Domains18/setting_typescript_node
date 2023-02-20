@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* className="nav-container pl-2 pr-10 bg-slate-100 h-[200px] shadow-xl flex justify-between" */
