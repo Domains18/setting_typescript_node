@@ -2,5 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-/* className="nav-container pl-2 pr-10 bg-slate-100 h-[200px] shadow-xl flex justify-between" */
+.logo h1{
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    width: 100%;
+}
+.search-input{
+    width: 400px;
+    height: 2rem;
+    border: 1px solid #000;
+    padding: 0 1rem;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background-color: inherit;
+}
+.search-input:focus{
+    outline: none;
+}
+
+.search-btn{
+    position: relative;
+    left: -60px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.nav-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+li{
+    cursor: pointer;
+}
+.shopping-cart{
+    position: relative;
+    top: 5px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: red;
+}
+span{
+    position: absolute;
+    top: 5px;
+    right: 111px;
+    background-color: red;
+    color: #fff;
+    padding: 0 4px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+}
