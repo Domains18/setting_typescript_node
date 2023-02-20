@@ -16,6 +16,11 @@ const Homepage = () => {
           </div>
         </div>
       </div>
+      <div className="home">
+        <div className="home-container">
+          
+        </div>
+      </div>
     </>
   )
 }
