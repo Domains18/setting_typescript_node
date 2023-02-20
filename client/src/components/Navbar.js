@@ -38,7 +38,7 @@ const Navbar = () => {
                         <li>Books</li>
                         <li>Authors</li>
                         <li>Categories</li>
-                        <li>Blog</li>
+                        <li>Privacy</li>
                         <li>Contact</li>
                     </ul>
                 </div> 
