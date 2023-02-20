@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { HiSearch } from 'react-icons/hi'
 const Navbar = () => {
     return (
         <>
@@ -12,8 +12,8 @@ const Navbar = () => {
                     </div>
                     <div className="next-sec">
                         <div className="search">
-                            <input type="text" placeholder="Search" />
-                            <button>Search</button>
+                            <input className="search-input" type="text" placeholder="Search" />
+                            <HiSearch className='search-btn'/>
                         </div>
                     </div>
                     <div className="third-sec">
@@ -23,6 +23,7 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
+                
             </nav>
         </>
     )
