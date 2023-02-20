@@ -1,7 +1,5 @@
 import React from 'react'
 import Navbar from '../components/Navbar';
-import MySwiper from '../components/swiper';
-// import SimpleSlider from '../components/Carousel';
 const Homepage = () => {
   return (
     <>
@@ -18,7 +16,6 @@ const Homepage = () => {
           </div>
         </div>
       </div>
-      <MySwiper />
     </>
   )
 }
