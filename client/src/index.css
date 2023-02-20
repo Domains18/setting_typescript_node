@@ -37,3 +37,37 @@
     font-size: 2rem;
     cursor: pointer;
 }
+
+.nav-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+li{
+    cursor: pointer;
+}
+.shopping-cart{
+    position: relative;
+    top: 5px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: red;
+}
+span{
+    position: absolute;
+    top: 5px;
+    right: 111px;
+    background-color: red;
+    color: #fff;
+    padding: 0 4px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+}
