@@ -74,22 +74,25 @@ span{
     border-radius: 50%;
     font-size: 0.8rem;
 }
-.home{
+.filter{
     margin-top: 20px;
 }
 .dropbtn{
-    background-color: #4caf50;
+    background-color: #000;
     color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
     margin-left: 20px;
+    width: 200px;
+    border-radius: 2px;
     
 }
 .dropdown{
     position: relative;
     display: inline-block;
+    top: -120px;
 }
 .dropdown-content{
     display: none;
@@ -112,3 +115,7 @@ span{
 .dropdown:hover .dropdown-content{
     display: block;
 }
+.swiper {
+    width: 600px;
+    height: 300px;
+  }

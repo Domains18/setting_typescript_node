@@ -1,11 +1,13 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/Navbar';
+import MySwiper from '../components/swiper';
+
 const Homepage = () => {
   return (
     <>
       <Navbar />
       <hr />
-      <div className="home ">
+      <div className="filter">
         <div className="dropdown">
           <button className="dropbtn"> filter by</button>
           <div className="dropdown-content">
@@ -14,8 +16,9 @@ const Homepage = () => {
             <a href="#">Grade 3</a>
             <a href="#">Grade 4</a>
           </div>
-         </div>
+        </div>
       </div>
+      <MySwiper/>
     </>
   )
 }
