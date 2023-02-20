@@ -20,7 +20,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className="next-sec">
-                        <div className="search">
+                        <div className="search">    
                             <input className="search-input" type="text" placeholder="Search" />
                             <HiSearch className='search-btn'/>
                         </div>
@@ -38,7 +38,7 @@ const Navbar = () => {
                         <li>Books</li>
                         <li>Authors</li>
                         <li>Categories</li>
-                        <li>Blog</li>
+                        <li>Privacy</li>
                         <li>Contact</li>
                     </ul>
                 </div> 
