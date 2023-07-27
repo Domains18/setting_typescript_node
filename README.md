@@ -1,2 +1,3 @@
-# M-pesa-javascript-sdk
- this is a simulation of mpesa api("https://developer.safaricom.co.ke/APIs")
+# Ultimate Guide to Building A REST API WITH TS & NODE
+
+this is repository covers how to get started with typescript and node js
