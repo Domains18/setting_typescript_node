@@ -1,30 +1,34 @@
 import { authentication, generateRandomString } from '../helpers/index';
-import { createUser, getUserByEmail, userModel } from './../database/users';
+import { createUser, getUserByEmail } from '../database/users';
 import express from "express";
 
 export const register = async (req: express.Request, res: express.Response) => {
-    try {
-        const {email, username, password} = req.body;
-        if(!email || !username || !password){
-            return res.sendStatus(400);
-        }
+    const { email, username, password } = req.body;
+    if (!email || !username || !password) {
+        res.status(400);
+        res.json("invalid input")
+    }
+        try {
+            
         const avoidDuplicate = await getUserByEmail(email);
-        if(avoidDuplicate){
-            return res.sendStatus(400);
+        if (avoidDuplicate) {
+            res.status(400);
+            res.json("duplicate detected")
         }
         //create authentication
         const salt = generateRandomString();
         const user = await createUser({
             email,
             username,
-            authentication:{
+            authentication: {
                 salt,
                 password: authentication(salt, password)
             }
         });
-        return res.sendStatus(200).json(user).end();
+        res.status(200);
+        res.json({ user });
     } catch (error) {
         console.log(error);
-        return res.sendStatus(500);
+        res.status(500);
     }
 }

@@ -1,5 +1,5 @@
 import express from 'express';
-import { register } from '../services/authentication';
+import { register } from '../services/user.service';
 
 
 export default( router: express.Router) => {
