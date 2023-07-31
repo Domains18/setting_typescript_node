@@ -1,24 +1,23 @@
 import express from 'express'
 import http from 'http'
 import dotenv from 'dotenv';
-import bodyParser from 'body-parser'
 import cookieParser from 'cookie-parser'
 import compression from 'compression'
 import cors from 'cors'
 import mongoose from 'mongoose';
 import router from './router/router';
 dotenv.config();
+
 const app = express();
+app.use(cookieParser());
 
 app.use(cors({
     credentials: true
 }));
 
 app.use(compression());
-// app.use(cookieParser());
-app.use(bodyParser.json());
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }))
 
 const server = http.createServer(app);
 
