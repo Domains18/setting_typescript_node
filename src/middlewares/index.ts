@@ -1,12 +1,21 @@
 import express from 'express';
-import {get, merge} from 'lodash';
+import { get, merge } from 'lodash';
 
 import { getUserBySessionToken } from 'database/users';
 
 
-export const isAuthenticated = async( req: express.Request, res: express.Response) => {
+export const isAuthenticated = async (req: express.Request, res: express.Response, next: express.NextFunction) => {
     try {
-        //Todo: add cookie
+        const sessionToken = req.cookies['react_sucks'];
+        if (!sessionToken) {
+            return res.sendStatus(401);
+        }
+        const existingUser = await getUserBySessionToken(sessionToken);
+        if (!existingUser) {
+            return res.sendStatus(403);
+        }
+        merge(req, { identity: existingUser });
+        return next();
     } catch (error) {
         console.log(error);
         return res.sendStatus(400);
