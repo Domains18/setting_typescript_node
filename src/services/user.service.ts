@@ -23,7 +23,7 @@ export const login = async (req: express.Request, res: express.Response) => {
         user.authentication.sessionToken = authentication(salt, user._id.toString());
         await user.save();
         // Set cookies
-        res.cookie('react_sucks', user.authentication.sessionToken, { domain: 'localhost', path: '/' });
+        res.cookie('typescript_auth', user.authentication.sessionToken, { domain: 'localhost', path: '/' });
         res.status(200).json(user).end();
     } catch (error) {
         console.log(error);
